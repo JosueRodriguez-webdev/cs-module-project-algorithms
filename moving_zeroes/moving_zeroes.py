@@ -6,17 +6,22 @@ Returns: a List of integers
 
 def moving_zeroes(arr):
     # if array length is less then 0 return
-    print(arr)
     if len(arr) < 0:
         return
 
     # loop thru the array
     for idx in range(len(arr)):
         # hold the index of the values that equal 0
+        print(idx, arr)
         if arr[idx] == 0:
             # record the index values here, if the value == 0
             arr.append(arr[idx])
             arr.pop(idx)
+            if idx == 0:
+                idx = 0
+            else:
+                idx -= 1
+        print(idx)
     return arr
 
 
