@@ -5,7 +5,10 @@ Returns: an integer
 
 
 def single_number(arr):
-    pass
+    print(arr)
+    for numbers in range(len(arr)):
+        if arr.count(arr[numbers]) == 1:
+            return arr[numbers]
 
 
 if __name__ == '__main__':
